@@ -36,8 +36,3 @@ array_drivers1 = [driver1,driver2,driver3,driver4,driver5]
 array_drivers2 = [driver6,driver7,driver8,driver9,driver10]
 array_drivers3 = [driver11,driver12,driver13,driver14,driver15]
 array_drivers4 = [driver16,driver17,driver18,driver19,driver20]
-
-puts array_drivers1
-puts array_drivers2
-puts array_drivers3
-puts array_drivers4
