@@ -9,6 +9,7 @@ class Tracks
         return "#{@racenumber}:#{@circuit}:#{@country}"
     end
 end
+
 race1 =Tracks.new("Race 1","Bahrain International Circuit","Bahrain")
 race2 =Tracks.new("Race 2","Jeddah Corniche Circuit","Saudi Arabia")
 race3 =Tracks.new("Race 3","Albert Park Circuit","Australia")
@@ -36,3 +37,5 @@ array_races2 = [race6,race7,race8,race9,race10]
 array_races3 = [race11,race12,race13,race14,race15]
 array_races4 = [race16,race17,race18,race19,race20]
 array_races5 = [race21,race22]
+
+puts array_races1

@@ -10,9 +10,10 @@ def select_option
 end
 
 def select_race
-    $prompt.select("Select race group",["Races 1-5","Races 6-10","Races 11-15","Races 16-20","Races 20-22"])
+    race=$prompt.select("Select race group",["Races 1-5","Races 6-10","Races 11-15","Races 16-20","Races 20-22"])
 system "clear"
 puts "Formula 1".red
+end
 option =""
 while option != "Exit"
     option = select_option
@@ -21,7 +22,9 @@ while option != "Exit"
         print "Table"
     when "Season Races"
         print "Season Races"
-
+        race=select_race
+    when "Races 1-5"
+        puts races.array_races1
     when "Drivers"
         puts "Driver List"
     when "Teams"
