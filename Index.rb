@@ -4,6 +4,7 @@ require_relative("./drivers.rb")
 require_relative("./tracks.rb")
 $prompt = TTY::Prompt.new
 
+
 def select_option
     answer = $prompt.select("Welcome to Formula 1".red,["Table","Season Races","Drivers","Teams","Exit",],cycle: true)
     answer
@@ -24,7 +25,7 @@ while option != "Exit"
         print "Season Races"
         race=select_race
     when "Races 1-5"
-        puts races.array_races1
+        puts $array_races1
     when "Drivers"
         puts "Driver List"
     when "Teams"
