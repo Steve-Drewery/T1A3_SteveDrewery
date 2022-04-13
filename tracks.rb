@@ -7,9 +7,12 @@ class Tracks
     end
     def to_s
         return "#{@racenumber}:#{@circuit}:#{@country}"
+    end      
+    def race_print
+        puts "#{@racenumber}:#{@circuit}:#{@country}"
     end
 end
-def races
+def data
 race1 =Tracks.new("Race 1","Bahrain International Circuit","Bahrain")
 race2 =Tracks.new("Race 2","Jeddah Corniche Circuit","Saudi Arabia")
 race3 =Tracks.new("Race 3","Albert Park Circuit","Australia")
@@ -32,11 +35,24 @@ race19 =Tracks.new("Race 19","Circuit of the Americas","United States")
 race20 =Tracks.new("Race 20","Autodromo Hermanos Rodrigquez","Mexico")
 race21 =Tracks.new("Race 21","Autodromo Jose Carlos Pace","Brazil")
 race22 =Tracks.new("Race 22","Yas Marina Circuit","Abu Dhabi")
-$array_races1 = [race1,race2,race3,race4,race5]
-array_races2 = [race6,race7,race8,race9,race10]
-array_races3 = [race11,race12,race13,race14,race15]
-array_races4 = [race16,race17,race18,race19,race20]
-array_races5 = [race21,race22]
-
-return race
 end
+race = data
+race.race_print
+
+
+# $array_races1 = [race1,race2,race3,race4,race5]
+# $array_races2 = [race6,race7,race8,race9,race10]
+# $array_races3 = [race11,race12,race13,race14,race15]
+# $array_races4 = [race16,race17,race18,race19,race20]
+# $array_races5 = [race21,race22]
+
+# class Races
+#     def print_races
+#         puts "#$array_races1".to_s
+#     end
+#     def to_s
+#         return "#{@racenumber}:#{@circuit}:#{@country}"
+#     end
+#     racesobj = Races.new
+#     racesobj.print_races
+# end
