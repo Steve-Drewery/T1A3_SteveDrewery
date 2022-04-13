@@ -10,6 +10,7 @@ class Driver
     end
 end
 
+
 driver1 =Driver.new("Albon, Alexander","Williams","Thailand","23")
 driver2 =Driver.new("Alonso, Fernando","Alpine","Spain","14")
 driver3 =Driver.new("Bottas, Valteri","Alfa Romeo","Finland","77")
