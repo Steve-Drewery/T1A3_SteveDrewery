@@ -1,3 +1,5 @@
+require_relative("./drivers.rb")
+
 class Tracks
     def initialize(racenumber,circuit,country)
         @racenumber = racenumber
@@ -5,10 +7,39 @@ class Tracks
         @country = country
     end
     def to_s
-        return "#{@racenumber}:#{@circuit}:#{@country}"
+        return "#{@racenumber}|#{@circuit}|#{@country}"
     end      
     def race_print
-        puts "(#{@racenumber}|#{@circuit}|#{@country})"
+        puts "Who won #{@circuit}?".yellow
+        winner = select_driver
+        puts winner.first
+        puts "Who came second?"
+        second = select_driver
+        puts second.second
+        puts "Who came third?"
+        third = select_driver
+        puts third.third
+        puts "Who came fourth?"
+        fourth = select_driver
+        puts fourth.fourth
+        puts "Who came fifth?"
+        fifth = select_driver
+        puts fifth.fifth
+        puts "Who came sixth?"
+        sixth = select_driver
+        puts sixth.sixth
+        puts "Who came seventh?"
+        seventh = select_driver
+        puts seventh.seventh
+        puts "Who came eighth?"
+        eighth = select_driver
+        puts eighth.eighth
+        puts "Who came ninth?"
+        ninth = select_driver
+        puts ninth.ninth
+        puts "Who came tenth?"
+        tenth = select_driver
+        puts tenth.tenth
     end
 end
 
