@@ -16,7 +16,6 @@ class Driver
     def first
         puts "#{@name} has just won the race!"
         @points +=25
-        @points2 +=25
     end
     def second
         puts "#{@name} came second!"
