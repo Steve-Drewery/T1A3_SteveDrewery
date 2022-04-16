@@ -13,33 +13,44 @@ class Tracks
         puts "Who won #{@circuit}?".yellow
         winner = select_driver
         puts winner.first
+        $array_drivers1.delete(winner)
         puts "Who came second?"
         second = select_driver
         puts second.second
+        $array_drivers1.delete(second)
         puts "Who came third?"
         third = select_driver
         puts third.third
+        $array_drivers1.delete(third)
         puts "Who came fourth?"
         fourth = select_driver
         puts fourth.fourth
+        $array_drivers1.delete(fourth)
         puts "Who came fifth?"
         fifth = select_driver
         puts fifth.fifth
+        $array_drivers1.delete(fifth)
         puts "Who came sixth?"
         sixth = select_driver
         puts sixth.sixth
+        $array_drivers1.delete(sixth)
         puts "Who came seventh?"
         seventh = select_driver
         puts seventh.seventh
+        $array_drivers1.delete(seventh)
         puts "Who came eighth?"
         eighth = select_driver
         puts eighth.eighth
+        $array_drivers1.delete(eighth)
         puts "Who came ninth?"
         ninth = select_driver
         puts ninth.ninth
+        $array_drivers1.delete(ninth)
         puts "Who came tenth?"
         tenth = select_driver
         puts tenth.tenth
+        $array_drivers1.push(winner,second,third,fourth,fifth,sixth,seventh,eighth,ninth,tenth)
+        $arraydrivers1.sort.to_h
     end
 end
 

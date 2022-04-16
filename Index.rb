@@ -74,6 +74,7 @@ while option != "Exit"
     when "Manufacturers Standings"
         puts "Manufacturer \t \t \t \t \t \t \t \t Points"
         puts "=================================================================================="
+
         puts $array_teams
     when "Races 1-5"
         race1 = select_race1
