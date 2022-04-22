@@ -69,13 +69,11 @@ while option != "Exit"
     option = select_option
     case option
     when "Drivers Standings"
-        puts "Driver \t \t \t \t Team \t \t \t \t \t Points"
         puts "=================================================================================="
-        puts $array_drivers1
+        puts $dtable
     when "Manufacturers Standings"
-        puts "Manufacturer \t \t \t \t \t \t \t \t Points"
         puts "=================================================================================="
-        puts $array_teams
+        puts $table
     when "Races 1-5"
         race1 = select_race1
         puts race1.race_print
