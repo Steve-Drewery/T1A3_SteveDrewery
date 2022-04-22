@@ -1,5 +1,6 @@
 require 'colorize'
 
+
 class Driver
     def initialize(name,team,country,number)
         @name = name
@@ -13,44 +14,44 @@ class Driver
         return "#{@name} \t \t #{@team} \t \t \t #{@points}"
     end
     def first
-        puts "#{@name} has just won the race!"
+        puts "#{@name}, #{@team} has just won the race!"
         @points +=25
-        @points2 +=25
     end
     def second
-        puts "#{@name} came second!"
+        puts "#{@name}, #{@team} came second!"
         @points +=18
     end
     def third
-        puts "#{@name} came third!"
+        puts "#{@name}, #{@team} came third!"
         @points +=15
     end
     def fourth
-        puts "#{@name} came fourth!"
+        puts "#{@name}, #{@team} came fourth!"
         @points +=12
     end
     def fifth
-        puts "#{@name} came fifth!"
+        puts "#{@name}, #{@team} came fifth!"
         @points +=10
     end
     def sixth
-        puts "#{@name} came sixth!"
+        puts "#{@name}, #{@team} came sixth!"
         @points +=8
     end
     def seventh
-        puts "#{@name} came seventh!"
+        puts "#{@name}, #{@team} came seventh!"
         @points +=6
     end
     def eighth
-        puts "#{@name} came eighth!"
+        puts "#{@name}, #{@team} came eighth!"
         @points +=4
+        @points2 +=4
     end
     def ninth
-        puts "#{@name} came ninth!"
+        puts "#{@name}, #{@team} came ninth!"
         @points +=2
     end
     def tenth
-        puts "#{@name} came tenth!"
+        puts "#{@name}, #{@team} came tenth!"
         @points +=1
     end
 end
@@ -78,27 +79,3 @@ driver19 =Driver.new("Verstappen, Max","Red Bull Racing","Netherlands","1")
 driver20 =Driver.new("Vettel, Sebastian","Aston Martin\t","Germany","5")
 
 $array_drivers1 = [driver1,driver2,driver3,driver4,driver5,driver6,driver7,driver8,driver9,driver10,driver11,driver12,driver13,driver14,driver15,driver16,driver17,driver18,driver19,driver20]
-
-class Team
-    def initialize(team)
-        @team = team
-        @points2=0
-    end
-    def to_s
-        return "#{@team} \t \t \t #{@points2}"
-    end
-end
-
-team1 = Team.new("Alpine\t \t \t \t \t \t")
-team2 = Team.new("Alfa Romeo\t \t \t \t \t")
-team3 = Team.new("Alpha Tauri\t \t \t \t \t")
-team4 = Team.new("Aston martin\t \t \t \t \t") 
-team5 = Team.new("Ferrari\t \t \t \t \t \t")
-team6 = Team.new("Haas F1 Team\t \t \t \t \t")
-team7 = Team.new("Mclaren\t \t \t \t \t \t")
-team8 = Team.new("Mercedes\t \t \t \t \t")
-team9 = Team.new("Red Bull Racing\t \t \t \t \t")
-team10 = Team.new("Williams\t \t \t \t \t")
-
-$array_teams = [team1,team2,team3,team4,team5,team6,team7,team8,team9,team10]
-

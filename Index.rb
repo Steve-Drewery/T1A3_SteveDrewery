@@ -2,6 +2,7 @@ require 'colorize'
 require "tty-prompt"
 require_relative("./drivers.rb")
 require_relative("./tracks.rb")
+require_relative("./teams.rb")
 $prompt = TTY::Prompt.new
 
 puts "
@@ -22,8 +23,8 @@ puts "
   \_______/                                              _ Seal _  \_______/        "
 
   puts "  
-        __                           _       __  
-        / _|                         | |     /  | 
+          __                           _       __  
+         / _|                         | |     /  | 
         | |_ ___  _ __ _ __ ___  _   _| | __ _`| | 
         |  _/ _ \| '__| '_ ` _ \| | | | |/ _` || | 
         | || (_) | |  | | | | | | |_| | | (_| || |_
@@ -74,7 +75,6 @@ while option != "Exit"
     when "Manufacturers Standings"
         puts "Manufacturer \t \t \t \t \t \t \t \t Points"
         puts "=================================================================================="
-
         puts $array_teams
     when "Races 1-5"
         race1 = select_race1
