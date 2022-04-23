@@ -81,18 +81,61 @@ while option != "Exit"
         puts "=================================================================================="
         puts $table
     when "Races 1-5"
-        race1 = select_race1
-        puts race1.race_print
+        puts "Would you like to see the weather or enter race details?"
+        answer2 = race_dets
+        if 
+            answer2 == "Weather"
+            race = select_race1
+            puts race1.weather
+        elsif 
+            answer2 == "Race Details"
+            race = select_race1
+            puts race.race_print
+        else
+            select_option    
+        end
     when "Races 6-10"
-        race2 = select_race2
-        puts race2.race_print
+        puts "Would you like to see the weather or enter race details?"
+        answer2 = race_dets
+        if 
+            answer2 == "Weather"
+            race = select_race2
+            puts race.weather
+        elsif 
+            answer2 == "Race Details"
+            race = select_race2
+            puts race.race_print
+        else
+            select_option    
+        end
     when "Races 11-15"
-        race3 = select_race3
-
-        puts race3.race_print
+        puts "Would you like to see the weather or enter race details?"
+        answer2 = race_dets
+        if 
+            answer2 == "Weather"
+            race3 = select_race3
+            puts race3.weather
+        elsif 
+            answer2 == "Race Details"
+            race3 = select_race3
+            puts race3.race_print
+        else
+            select_option    
+        end
     when "Races 16-20"
-        race4 = select_race4
-        puts race4.race_print
+        puts "Would you like to see the weather or enter race details?"
+        answer2 = race_dets
+        if 
+            answer2 == "Weather"
+            race4 = select_race4
+            puts race4.weather
+        elsif 
+            answer2 == "Race Details"
+            race5 = select_race4
+            puts race4.race_print
+        else
+            select_option    
+        end
     when "Races 21-22"
         puts "Would you like to see the weather or enter race details?"
         answer2 = race_dets

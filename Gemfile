@@ -15,6 +15,4 @@ gem "tty-table"
 
 gem 'tty-link'
 
-gem 'json'
-
-gem 'open-weather'
+gem 'weather-forecasts', '~> 1.2', '>= 1.2.7'
