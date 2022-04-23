@@ -1,9 +1,11 @@
 require 'colorize'
 require "tty-prompt"
+require 'tty-link'
 require_relative("./drivers.rb")
 require_relative("./tracks.rb")
 require_relative("./teams.rb")
 $prompt = TTY::Prompt.new
+
 
 puts "
                                      d88b
@@ -64,6 +66,10 @@ def select_driver
     driver = $prompt.select("",[$array_drivers1])
 end
 
+def race_dets
+    answer2 = $prompt.select("Would you like to see the weather for this race or enter race details?", "Weather", "Race Details", "Exit")
+end
+
 option =""
 while option != "Exit"
     option = select_option
@@ -82,13 +88,25 @@ while option != "Exit"
         puts race2.race_print
     when "Races 11-15"
         race3 = select_race3
+
         puts race3.race_print
     when "Races 16-20"
         race4 = select_race4
         puts race4.race_print
     when "Races 21-22"
-        race5 = select_race5
-        puts race5.race_print
+        puts "Would you like to see the weather or enter race details?"
+        answer2 = race_dets
+        if 
+            answer2 == "Weather"
+            race5 = select_race5
+            puts race5.weather
+        elsif 
+            answer2 == "Race Details"
+            race5 = select_race5
+            puts race5.race_print
+        else
+            select_option    
+        end
     else
         puts "Goodbye"
         next
@@ -96,5 +114,3 @@ while option != "Exit"
     gets
     system "clear"
 end
-
-

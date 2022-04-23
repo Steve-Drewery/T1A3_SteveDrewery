@@ -12,3 +12,9 @@ gem "colorize", "~> 0.8.1"
 gem "tty-prompt"
 
 gem "tty-table"
+
+gem 'tty-link'
+
+gem 'json'
+
+gem 'open-weather'

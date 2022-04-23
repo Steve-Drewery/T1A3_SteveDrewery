@@ -1,13 +1,13 @@
 require_relative("./drivers.rb")
 
 class Tracks
-    def initialize(racenumber,circuit,country)
+    def initialize(racenumber,circuit,weather)
         @racenumber = racenumber
         @circuit = circuit
-        @country = country
+        @weather = weather
     end
     def to_s
-        return "#{@racenumber}|#{@circuit}|#{@country}"
+        return "#{@racenumber}|#{@circuit}|#{@weather}"
     end      
     def race_print
         puts "Who won #{@circuit}?".yellow
@@ -59,6 +59,10 @@ class Tracks
         tenth = select_driver
         puts tenth.tenth
         $array_drivers1.push(winner,second,third,fourth,fifth,sixth,seventh,eighth,ninth,tenth)
+    end
+    def weather
+        puts TTY::Link.link_to("#{@circuit} Weather Link", "https://ttytoolkit.org")
+        puts "Press Enter to go back to home."
     end
 end
 
