@@ -1,71 +1,33 @@
+require_relative("./data.rb")
+require_relative("./teams.rb")
 require_relative("./drivers.rb")
 
-class Tracks
-    def initialize(racenumber,circuit,country,weather)
-        @racenumber = racenumber
-        @circuit = circuit
-        @weather = weather
-        @country = country
-    end
-    def to_s
-        return "#{@racenumber}|#{@circuit}|#{@country}"
-    end      
-    def race_print
-        puts "Who won #{@circuit}?".yellow
-        winner = select_driver
-        puts winner.first
-        $array_drivers1.delete(winner)
+def data
+driver1 =Driver.new("Albon, Alexander           ","Williams                     ","Thailand","23")
+driver2 =Driver.new("Alonso, Fernando           ","Alpine                       ","Spain","14")
+driver3 =Driver.new("Bottas, Valteri            ","Alfa Romeo                   ","Finland","77")
+driver4 =Driver.new("Gasly, Pierre              ","Alpha Tauri                  ","France","10")
+driver5 =Driver.new("Guanyu, Zhou               ","Alfa Romeo                   ","China","24")
+driver6 =Driver.new("Hamilton, Lewis            ","Mercedes                     ","United Kingdom","44")
+driver7 =Driver.new("Hulkenberg, Nico           ","Aston Martin                 ","Germany","27")
+driver8 =Driver.new("Latifi, Nicholas           ","Williams                     ","Canada","6")
+driver9 =Driver.new("Leclerc, Charles           ","Ferrari                      ","Canada","6")
+driver10=Driver.new("Magnussen, Kevin           ","Haas F1 Team                 ","Norway","20")
+driver11=Driver.new("Norris, Lando              ","Mclaren                      ","United Kingdom","4")
+driver11=Driver.new("Ocon, Esteban              ","Alpine                       ","France","31")
+driver12=Driver.new("Perez, Sergio              ","Red Bull Racing              ","Mexico","11")
+driver13=Driver.new("Ricciardo, Daniel          ","Mclaren                      ","Australia","3")
+driver14=Driver.new("Russel, George             ","Mercedes                     ","United Kingdom","63")
+driver15=Driver.new("Sainz, Carlos              ","Ferrari                      ","Spain","55")
+driver16=Driver.new("Schumacher, Mick           ","Haas F1 Team                 ","Germany","47")
+driver17=Driver.new("Stroll, Lance              ","Aston Martin                 ","Canada","18")
+driver18=Driver.new("Tsunoda, Yuki              ","Alpha Tauri                  ","Japan","22")
+driver19=Driver.new("Verstappen, Max            ","Red Bull Racing              ","Netherlands","1")
+driver20=Driver.new("Vettel, Sebastian          ","Aston Martin                 ","Germany","5")
 
-        puts "Who came second?"
-        second = select_driver
-        puts second.second
-        $array_drivers1.delete(second)
 
-        puts "Who came third?"
-        third = select_driver
-        puts third.third
-        $array_drivers1.delete(third)
+$dtable = TTY::Table.new(["     Drivers                    Teams                   Points"], [[driver1],[driver2],[driver3],[driver4],[driver5],[driver6],[driver7],[driver8],[driver9],[driver10],[driver11],[driver12],[driver13],[driver14],[driver15],[driver16],[driver17],[driver18],[driver19],[driver20],])
 
-        puts "Who came fourth?"
-        fourth = select_driver
-        puts fourth.fourth
-        $array_drivers1.delete(fourth)
-
-        puts "Who came fifth?"
-        fifth = select_driver
-        puts fifth.fifth
-        $array_drivers1.delete(fifth)
-
-        puts "Who came sixth?"
-        sixth = select_driver
-        puts sixth.sixth
-        $array_drivers1.delete(sixth)
-
-        puts "Who came seventh?"
-        seventh = select_driver
-        puts seventh.seventh
-        $array_drivers1.delete(seventh)
-
-        puts "Who came eighth?"
-        eighth = select_driver
-        puts eighth.eighth
-        $array_drivers1.delete(eighth)
-
-        puts "Who came ninth?"
-        ninth = select_driver
-        puts ninth.ninth
-        $array_drivers1.delete(ninth)
-
-        puts "Who came tenth?"
-        tenth = select_driver
-        puts tenth.tenth
-        $array_drivers1.push(winner,second,third,fourth,fifth,sixth,seventh,eighth,ninth,tenth)
-    end
-    def weather
-        puts TTY::Link.link_to("#{@circuit} | Click Weather Link", "#{@weather}")
-        puts "Press Enter to go back to home."
-    end
-end
 
 race1 =Tracks.new("Race 1","Bahrain International Circuit","Bahrain","https://www.google.com/search?client=firefox-b-d&q=weather+bahrain")
 race2 =Tracks.new("Race 2","Jeddah Corniche Circuit","Saudi Arabia","https://www.google.com/search?client=firefox-b-d&q=saudi+arabia+weather")
@@ -95,3 +57,9 @@ $array_races3 = [race11,race12,race13,race14,race15]
 $array_races4 = [race16,race17,race18,race19,race20]
 $array_races5 = [race21,race22]
 
+
+
+league = [$dtable,$table]
+
+return league
+end

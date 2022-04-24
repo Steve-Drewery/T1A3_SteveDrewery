@@ -14,5 +14,3 @@ gem "tty-prompt"
 gem "tty-table"
 
 gem 'tty-link'
-
-gem 'weather-forecasts', '~> 1.2', '>= 1.2.7'

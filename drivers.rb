@@ -1,5 +1,6 @@
 require 'colorize'
 require "tty-table"
+require_relative("./drivers.rb")
 
 class Driver
     def initialize(name,team,country,number)

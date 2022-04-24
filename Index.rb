@@ -7,6 +7,7 @@ require_relative("./teams.rb")
 $prompt = TTY::Prompt.new
 
 
+
 puts "
                                      d88b
                      _______________|8888|_______________
@@ -35,7 +36,46 @@ puts "
 
 
 
-
+                                                    def first
+                                                        puts "#{@name}, #{@team} has just won the race!"
+                                                        @points +=25
+                                                    end
+                                                    def second
+                                                        puts "#{@name}, #{@team} came second!"
+                                                        @points +=18
+                                                    end
+                                                    def third
+                                                        puts "#{@name}, #{@team} came third!"
+                                                        @points +=15
+                                                    end
+                                                    def fourth
+                                                        puts "#{@name}, #{@team} came fourth!"
+                                                        @points +=12
+                                                    end
+                                                    def fifth
+                                                        puts "#{@name}, #{@team} came fifth!"
+                                                        @points +=10
+                                                    end
+                                                    def sixth
+                                                        puts "#{@name}, #{@team} came sixth!"
+                                                        @points +=8
+                                                    end
+                                                    def seventh
+                                                        puts "#{@name}, #{@team} came seventh!"
+                                                        @points +=6
+                                                    end
+                                                    def eighth
+                                                        puts "#{@name}, #{@team} came eighth!"
+                                                        @points +=4
+                                                    end
+                                                    def ninth
+                                                        puts "#{@name}, #{@team} came ninth!"
+                                                        @points +=2
+                                                    end
+                                                    def tenth
+                                                        puts "#{@name}, #{@team} came tenth!"
+                                                        @points +=1
+                                                    end
 
 def select_option
     answer = $prompt.select("Welcome to Formula 1".red,["Drivers Standings","Manufacturers Standings","Races 1-5","Races 6-10","Races 11-15","Races 16-20","Races 21-22","Exit",],cycle: true)
@@ -86,7 +126,7 @@ while option != "Exit"
         if 
             answer2 == "Weather"
             race = select_race1
-            puts race1.weather
+            puts race.weather
         elsif 
             answer2 == "Race Details"
             race = select_race1
@@ -113,12 +153,12 @@ while option != "Exit"
         answer2 = race_dets
         if 
             answer2 == "Weather"
-            race3 = select_race3
-            puts race3.weather
+            race = select_race3
+            puts race.weather
         elsif 
             answer2 == "Race Details"
-            race3 = select_race3
-            puts race3.race_print
+            race = select_race3
+            puts race.race_print
         else
             select_option    
         end
@@ -127,12 +167,12 @@ while option != "Exit"
         answer2 = race_dets
         if 
             answer2 == "Weather"
-            race4 = select_race4
-            puts race4.weather
+            race = select_race4
+            puts race.weather
         elsif 
             answer2 == "Race Details"
-            race5 = select_race4
-            puts race4.race_print
+            race = select_race4
+            puts race.race_print
         else
             select_option    
         end
@@ -141,12 +181,12 @@ while option != "Exit"
         answer2 = race_dets
         if 
             answer2 == "Weather"
-            race5 = select_race5
-            puts race5.weather
+            race = select_race5
+            puts race.weather
         elsif 
             answer2 == "Race Details"
-            race5 = select_race5
-            puts race5.race_print
+            race = select_race5
+            puts race.race_print
         else
             select_option    
         end

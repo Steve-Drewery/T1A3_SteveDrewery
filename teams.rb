@@ -12,9 +12,6 @@ class Team
     end
 end
 
-
-
-
 team1 = Team.new("Alpine                    ")
 team2 = Team.new("Alfa Romeo                ")
 team3 = Team.new("Alpha Tauri               ")
@@ -25,17 +22,6 @@ team7 = Team.new("Mclaren                   ")
 team8 = Team.new("Mercedes                  ")
 team9 = Team.new("Red Bull Racing           ")
 team10= Team.new("Williams                  ")
-
-$teams_array = [team1,team2,team3,team4,team5,team6,team7,team8,team9,team10]
-
-
-# def team_table
-#     table = TTY::Table.new(["Teams", "Points"], [[@team],[@points]])
-#     puts table.render(:ascii)
-# end
-
-
-
 
 $table = TTY::Table.new(["Teams                     Points"], [[team1], [team2],[team3],[team4],[team5],[team6],[team7],[team8],[team9],[team10],])
 
